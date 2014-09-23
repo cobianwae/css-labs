@@ -1,0 +1,50 @@
+.top-bar-section li.mega-menu {	
+	position: initial;
+}
+
+li.mega-menu.columns-2 > ul > li {
+	width: 50%;	
+	position: relative;
+}
+
+
+li.mega-menu.columns-3 > ul > li {
+	width: 33.33%;	
+}
+
+li.mega-menu.columns-4 > ul > li {
+	width: 25%;	
+}
+
+li.mega-menu ul.sub-menu {
+	/*TODO : change it with some variables*/
+	/*background-color: #333333;*/
+}
+
+li.mega-menu > ul > li {
+	border-right: 1px solid;
+}
+
+ li.mega-menu > ul > li:last-child {
+ 	border-right: none;
+}
+
+
+.top-bar-section .dropdown li.menu-item:not(.has-form):not(.active):hover > a {
+	/*TODO : change it with some variables*/
+	/*background-color: #333333;*/
+	/*color: red;*/
+}
+
+.top-bar-section li.mega-menu ul li.menu-item-50 {
+	min-width: 50%;
+	width: 50%;
+	left: 25%;
+}
+
+.top-bar-section li.mega-menu ul.menu-item-75 {
+	min-width: 75%;
+	width: 75%;
+	left: 12.5%;
+}
+
