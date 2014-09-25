@@ -9,7 +9,7 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    <div class="contain-to-grid">
+    <div class="contain-to-grid wrapper-nav">
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
@@ -22,13 +22,13 @@
           <!-- Right Nav Section -->
           <nav>
             <ul class="left">
-              <li class="has-dropdown">
+              <!-- <li class="has-dropdown">
                 <a href="#">Right Button Dropdown</a>
                 <ul class="dropdown">
                   <li><a href="#">First link in dropdown</a></li>
                   <li class="active"><a href="#">Active link in dropdown</a></li>
                 </ul>
-              </li>
+              </li> -->
 
               <li class="mega-menu columns-2 has-dropdown">
                 <a href="#">Element</a>
@@ -78,9 +78,9 @@
                     </ul>
                  </li>
                 </ul>
-              </li>
+              </li> 
 
-              <li class="mega-menu columns-4 has-dropdown">
+              <!--<li class="mega-menu columns-4 has-dropdown">
                 <a href="#">Demo</a>
                 <ul class="sub-menu dropdown">
                  <li>
@@ -113,28 +113,15 @@
                     </ul>
                  </li>
                 </ul>
-              </li>
-              <!-- <li class="has-dropdown">
-                <a href="#">Right Button Dropdown</a>
-                <ul class="dropdown">
-                  <li>
-                    <ul class="submenu">
-
-                    </ul>
-                    <a href="#">First link in dropdown</a>
-                  </li>
-                  <li class="active"><a href="#">Active link in dropdown</a></li>
-                </ul>
-              </li> -->
+              </li>  -->
+              
             </ul>
           </nav>
-
-          <!-- Left Nav Section -->
-          <!-- <ul class="left">
-            <li><a href="#">Left Nav Button</a></li>
-          </ul> -->
-        </section>
+        </section> <!-- top bar section -->
       </nav>
+    </div> <!-- contain to grid -->
+    <div class="contain-to-grid full-screen" style="background-image:url(img/5-copy.jpg)">
+
     </div>
     <div class="row">
       <div class="large-12 columns">
@@ -289,6 +276,7 @@
     <script>
       $(document).foundation();
       $(document).ready(function(){
+        <!-- UBER MENU -->
         var liHeight = 0
         $('.mega-menu .dropdown > li').each(function(idx, val){          
           if($(this).height() > liHeight){
@@ -299,6 +287,23 @@
         $('.mega-menu .dropdown > li').each(function(idx, val){          
           $(this).height(liHeight);          
         });
+
+        <!-- SCROLL ANIMATION -->
+        $(window).scroll(function() {
+          if ( $(window).scrollTop()  > $(window).height() + $('.wrapper-nav').height() )  {        
+            console.log($('.wrapper-nav').hasClass('sticky-nav'));
+            //console.log(!$('.wrapper-nav').hasClass('sticky-nav'));
+            if ( $('.wrapper-nav').hasClass('sticky-nav') === false ){
+              //alert('tambah');
+              $('.wrapper-nav').addClass('sticky-nav');  
+            }
+          }else{
+            $('.wrapper-nav').removeClass('sticky-nav');
+          }
+        });
+
+      
+
       });
     </script>
   </body>
