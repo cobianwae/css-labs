@@ -54,15 +54,20 @@ li.mega-menu > ul > li {
 
 .sticky-nav {
 	position: fixed;
-	top: 0px;
+	top: -100px;
 	opacity: 0;
 	z-index: 99;
-	-webkit-transform: translateY(-100px);
+	transition : opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+	-webkit-transition : opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+	/*-webkit-transform: translateY(-100px);
 	transform:translateY(-100px);
 	-webkit-animation: moveDown 0.65s ease-in-out forwards;
-	animation: moveDown 0.65s ease-in-out forwards;	
+	animation: moveDown 0.65s ease-in-out forwards;	*/
 }
-
+.sticky-nav-show{
+	top:0;
+	opacity: 1;
+}
 /*.item-content .move-up {
  	-webkit-transform: translateY(25px);
  	transform: translateY(25px);

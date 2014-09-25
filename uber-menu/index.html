@@ -295,10 +295,14 @@
             //console.log(!$('.wrapper-nav').hasClass('sticky-nav'));
             if ( $('.wrapper-nav').hasClass('sticky-nav') === false ){
               //alert('tambah');
-              $('.wrapper-nav').addClass('sticky-nav');  
+              $('.wrapper-nav').addClass('sticky-nav'); 
+              setTimeout(function(){
+                $('.wrapper-nav').addClass('sticky-nav-show'); 
+              });
             }
           }else{
             $('.wrapper-nav').removeClass('sticky-nav');
+            $('.wrapper-nav').removeClass('sticky-nav-show');
           }
         });
 
