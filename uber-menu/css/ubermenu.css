@@ -54,13 +54,21 @@ li.mega-menu > ul > li {
 
 .wrapper-nav-sticky {	
 	position: fixed;
-	top: 0;
+	top: -100px;
 	opacity: 0;
 	z-index: 99;
-	transition : opacity 0.2s ease-in-out, top 0.2s ease-in-out;
-	-webkit-transition : opacity 0.2s ease-in-out, top 0.2s ease-in-out;		
+	/*display: none;*/
+	transition : opacity 0.6s ease-in-out, top 0.6s ease-in-out;
+	-webkit-transition : opacity 0.6s ease-in-out, top 0.6s ease-in-out;		
 }
-
+.nav-sticky-slide{
+	top:0;
+	opacity: 1;
+	/*display: block;*/
+}
+.hide{
+	display: none;
+}
 
 
 
